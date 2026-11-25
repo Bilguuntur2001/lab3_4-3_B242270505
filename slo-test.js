@@ -12,7 +12,7 @@ export const options = {
   vus: 20,
   duration: __ENV.DURATION || '1m',
   thresholds: {
-    // Performance SLO: /cart/add — хэмжсэн p95 ≈ 4ms → 5 дахин нөөцтэй 20ms, p99 < 50ms
+    // Performance SLO: /cart/add — localhost-д p95 ~1-5ms → регресс барих 20ms, p99 < 50ms
     'http_req_duration{name:cart}': ['p(95)<20', 'p(99)<50'],
     // Reliability SLO: /pay — 5% алдаа суулгасан, 8% нь санамсаргүй хэлбэлзлийн нөөцтэй
     'http_req_failed{name:pay}': ['rate<0.08'],
