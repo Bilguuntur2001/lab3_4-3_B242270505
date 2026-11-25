@@ -1,0 +1,2 @@
+20:35:53 server зогсоов (SIGINT = Ctrl+C)
+20:36:04 server дахин асаав (node server.js)
